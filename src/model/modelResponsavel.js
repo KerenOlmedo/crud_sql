@@ -23,6 +23,11 @@ const colunasResponsavel = {
     status: {
         type: Sequelize.BOOLEAN,
         defaultValue: true
+    },
+    email:{
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true
     }
 };
 

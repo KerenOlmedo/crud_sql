@@ -1,28 +1,24 @@
-const Pets = require('../model/modelPets')
+const modelPet = require('../model/modelPets')
 
 module.exports = {
-    listar(){
-        return Pets.findAll({raw:true})
+    async listar(){
+        return await modelPet.findAll({raw:true})
     },
 
     inserir(pet){
-        return Pets.create(pet)
+        return modelPet.create(pet)
     },
 
-    buscarId(id){
-        const petEncontrado = Pets.findOne({
+    async buscarId(id){
+        return await modelPet.findOne({
             where:{
                 idpets: id
             }
         })
-        if (!petEncontrado) {
-            throw new Error('Pet não encontrado')
-        }
-        return petEncontrado
     },
 
     atualizar(id, pet){
-        return Pets.update(pet,{
+        return modelPet.update(pet,{
             where:{
                 idpets: id
             }
@@ -30,7 +26,7 @@ module.exports = {
     },
 
     apagar(id){
-        return Pets.destroy({
+        return modelPet.destroy({
             where:{
                 idpets: id
             }
