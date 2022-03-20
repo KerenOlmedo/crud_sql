@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const instancia = require('../bancoDeDados/dados');
+const instancia = require('../../bancoDeDados/dados');
 
 const colunasPet = {
     idpets: {

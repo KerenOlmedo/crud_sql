@@ -1,4 +1,4 @@
-const Pets = require('../model/Pets')
+const Pets = require('../model/modelPets')
 
 module.exports = {
     listar(){
