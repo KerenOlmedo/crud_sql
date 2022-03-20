@@ -1,5 +1,6 @@
 const modelos = [
-    require('../model/Pets')
+    require('../src/model/modelPets'),
+    require('../src/model/modelResponsavel')
 ]
 
 function criarTabela() {
